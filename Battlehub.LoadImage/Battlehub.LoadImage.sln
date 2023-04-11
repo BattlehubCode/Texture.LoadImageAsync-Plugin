@@ -5,22 +5,52 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Battlehub.LoadImage", "Battlehub.LoadImage\Battlehub.LoadImage.vcxproj", "{5DC841FA-691A-4942-B101-1DAF89B4D8F9}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Battlehub.LoadImage.Droid", "Battlehub.LoadImage.Droid\Battlehub.LoadImage.Droid.vcxproj", "{F5A1795E-7ECB-4A89-B368-35A1DEE441AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5DC841FA-691A-4942-B101-1DAF89B4D8F9}.Debug|ARM.ActiveCfg = Debug|x64
+		{5DC841FA-691A-4942-B101-1DAF89B4D8F9}.Debug|ARM.Build.0 = Debug|x64
+		{5DC841FA-691A-4942-B101-1DAF89B4D8F9}.Debug|ARM64.ActiveCfg = Debug|x64
+		{5DC841FA-691A-4942-B101-1DAF89B4D8F9}.Debug|ARM64.Build.0 = Debug|x64
 		{5DC841FA-691A-4942-B101-1DAF89B4D8F9}.Debug|x64.ActiveCfg = Debug|x64
 		{5DC841FA-691A-4942-B101-1DAF89B4D8F9}.Debug|x64.Build.0 = Debug|x64
 		{5DC841FA-691A-4942-B101-1DAF89B4D8F9}.Debug|x86.ActiveCfg = Debug|Win32
 		{5DC841FA-691A-4942-B101-1DAF89B4D8F9}.Debug|x86.Build.0 = Debug|Win32
+		{5DC841FA-691A-4942-B101-1DAF89B4D8F9}.Release|ARM.ActiveCfg = Release|x64
+		{5DC841FA-691A-4942-B101-1DAF89B4D8F9}.Release|ARM.Build.0 = Release|x64
+		{5DC841FA-691A-4942-B101-1DAF89B4D8F9}.Release|ARM64.ActiveCfg = Release|x64
+		{5DC841FA-691A-4942-B101-1DAF89B4D8F9}.Release|ARM64.Build.0 = Release|x64
 		{5DC841FA-691A-4942-B101-1DAF89B4D8F9}.Release|x64.ActiveCfg = Release|x64
 		{5DC841FA-691A-4942-B101-1DAF89B4D8F9}.Release|x64.Build.0 = Release|x64
 		{5DC841FA-691A-4942-B101-1DAF89B4D8F9}.Release|x86.ActiveCfg = Release|Win32
 		{5DC841FA-691A-4942-B101-1DAF89B4D8F9}.Release|x86.Build.0 = Release|Win32
+		{F5A1795E-7ECB-4A89-B368-35A1DEE441AF}.Debug|ARM.ActiveCfg = Debug|ARM
+		{F5A1795E-7ECB-4A89-B368-35A1DEE441AF}.Debug|ARM.Build.0 = Debug|ARM
+		{F5A1795E-7ECB-4A89-B368-35A1DEE441AF}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{F5A1795E-7ECB-4A89-B368-35A1DEE441AF}.Debug|ARM64.Build.0 = Debug|ARM64
+		{F5A1795E-7ECB-4A89-B368-35A1DEE441AF}.Debug|x64.ActiveCfg = Debug|x64
+		{F5A1795E-7ECB-4A89-B368-35A1DEE441AF}.Debug|x64.Build.0 = Debug|x64
+		{F5A1795E-7ECB-4A89-B368-35A1DEE441AF}.Debug|x86.ActiveCfg = Debug|x86
+		{F5A1795E-7ECB-4A89-B368-35A1DEE441AF}.Debug|x86.Build.0 = Debug|x86
+		{F5A1795E-7ECB-4A89-B368-35A1DEE441AF}.Release|ARM.ActiveCfg = Release|ARM
+		{F5A1795E-7ECB-4A89-B368-35A1DEE441AF}.Release|ARM.Build.0 = Release|ARM
+		{F5A1795E-7ECB-4A89-B368-35A1DEE441AF}.Release|ARM64.ActiveCfg = Release|ARM64
+		{F5A1795E-7ECB-4A89-B368-35A1DEE441AF}.Release|ARM64.Build.0 = Release|ARM64
+		{F5A1795E-7ECB-4A89-B368-35A1DEE441AF}.Release|x64.ActiveCfg = Release|x64
+		{F5A1795E-7ECB-4A89-B368-35A1DEE441AF}.Release|x64.Build.0 = Release|x64
+		{F5A1795E-7ECB-4A89-B368-35A1DEE441AF}.Release|x86.ActiveCfg = Release|x86
+		{F5A1795E-7ECB-4A89-B368-35A1DEE441AF}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,11 @@
 #pragma once
 
+#if defined(__MACH__) || defined(__ANDROID__) || defined(__linux__)
+#define DLLExport
+#else
 #define DLLExport __declspec(dllexport)
+#endif
+
 
 struct ImageInfo
 {
