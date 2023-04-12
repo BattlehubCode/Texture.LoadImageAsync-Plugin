@@ -1,11 +1,12 @@
 #pragma once
 
-#if defined(__MACH__) || defined(__ANDROID__) || defined(__linux__)
-#define DLLExport
-#else
+#if _WIN32 
 #define DLLExport __declspec(dllexport)
+typedef wchar_t Char;
+#else
+#define DLLExport
+typedef char Char;
 #endif
-
 
 struct ImageInfo
 {
@@ -17,7 +18,7 @@ struct ImageInfo
 
 extern "C"
 {
-    DLLExport ImageInfo Battlehub_LoadImage_GetInfo(const char* path);
+    DLLExport ImageInfo Battlehub_LoadImage_GetInfo(const Char* path);
 
-    DLLExport void Battlehub_LoadImage_Load(const char* path, void* bytes, int channels, int mipLevels);
+    DLLExport void Battlehub_LoadImage_Load(const Char* path, void* bytes, int channels, int mipLevels);
 }
