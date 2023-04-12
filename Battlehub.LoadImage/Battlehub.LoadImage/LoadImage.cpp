@@ -13,7 +13,7 @@ ImageInfo Battlehub_LoadImage_GetInfo(const Char* file)
 	char path[1024] = "";
 	stbi_convert_wchar_to_utf8(path, 1024, file);
 #else
-	char* path = file;
+	const char* path = file;
 #endif
 	ImageInfo info;
 	info.status = stbi_info(path, &info.width, &info.height, &info.channels);
@@ -26,7 +26,7 @@ void Battlehub_LoadImage_Load(const Char* file, void* outData, int channels, int
 	char path[1024] = "";
 	stbi_convert_wchar_to_utf8(path, 1024, file);
 #else
-	char* path = file;
+	const char* path = file;
 #endif
 
 	stbi_set_flip_vertically_on_load(1);
