@@ -55,7 +55,7 @@ ImageInfo Battlehub_LoadImage_GetInfo(const Char* file)
 }
 
 
-void Battlehub_LoadImage_Load(const Char* file, void* outData, int channels, int mipmapCount)
+void Battlehub_LoadImage_Load(const Char* file, void* outData, int channels, int mipmapCount, int width, int height)
 {
 #if _WIN32
 	char path[1024] = "";
@@ -66,17 +66,46 @@ void Battlehub_LoadImage_Load(const Char* file, void* outData, int channels, int
 
 	stbi_set_flip_vertically_on_load(1);
 
-	int width, height, n;
-	stbi_uc* data = stbi_load(path, &width, &height, &n, channels);
+	int srcWidth, srcHeight, srcChannels;
+	stbi_uc* data = stbi_load(path, &srcWidth, &srcHeight, &srcChannels, channels);
 	if (data == NULL)
 	{
 		return;
 	}
 
+	bool resize = width > 0 || height > 0;
+	
+	if (width <= 0)
+	{
+		width = srcWidth;
+	}	
+
+	if (height <= 0)
+	{
+		height = srcHeight;
+	}
+	
+	if (channels <= 0)
+	{
+		channels = srcChannels;
+	}
+	
 	stbi_uc* ptr = (stbi_uc*)outData;
-	memcpy(ptr, data, width * height * channels);
+	if (resize)
+	{
+		stbir_resize_uint8(data, srcWidth, srcHeight, 0, ptr, width , height, 0, channels);
+	}
+	else
+	{
+		memcpy(ptr, data, width * height * channels);
+	}
+	
 	stbi_image_free(data);
-	GenerateMipmaps(ptr, width, height, channels, mipmapCount);
+	
+	if (mipmapCount > 1)
+	{
+		GenerateMipmaps(ptr, width, height, channels, mipmapCount);
+	}
 }
 
 ImageInfo Battlehub_LoadImage_Load_From_Memory(void* inData, int size, bool mipChain, void** outData)

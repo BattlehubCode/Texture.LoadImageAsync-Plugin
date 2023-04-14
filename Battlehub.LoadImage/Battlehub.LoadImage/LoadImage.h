@@ -20,7 +20,7 @@ extern "C"
 {
     DLLExport ImageInfo Battlehub_LoadImage_GetInfo(const Char* path);
 
-    DLLExport void Battlehub_LoadImage_Load(const Char* path, void* bytes, int channels, int mipmapCount);
+    DLLExport void Battlehub_LoadImage_Load(const Char* file, void* outData, int channels = 0, int mipmapCount = 1, int width = 0, int height = 0);
 
     DLLExport ImageInfo Battlehub_LoadImage_Load_From_Memory(void* bytes, int size, bool mipChain, void** outBytes);
 
